@@ -1,0 +1,7 @@
+{
+    "Button" : {
+        "Login" : "fr-Login",
+        "Register" : "fr-Register",
+        "Dashboard" : "fr-Dashboard"
+    }
+}

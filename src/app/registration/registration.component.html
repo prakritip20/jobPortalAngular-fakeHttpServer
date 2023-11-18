@@ -1,0 +1,26 @@
+<div class="mainContentWrap d-flex">
+    <div style="background: #6c757d!important;
+text-align: center;
+width: 25%;
+display: flex;
+flex-direction: column;
+align-items: center;
+color: white;
+padding: 100px 24px 24px;
+min-height: calc(100vh - 52.7px - 36px);
+box-sizing: border-box;">
+        <img src="assets/users.png" style="width:35%">
+        <h2 class="py-3">Registration</h2>
+        <p>"Choose a job you love, and you will never have to work a day in your life."<br> —Confucius</p>
+    </div>
+    <div style="width: 75%;">
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" (selectedTabChange)="tabChange($event)">
+            <mat-tab label="Employee">
+                <app-sregister></app-sregister>
+            </mat-tab>
+            <mat-tab label="Recruiter">
+                <app-r-register></app-r-register>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

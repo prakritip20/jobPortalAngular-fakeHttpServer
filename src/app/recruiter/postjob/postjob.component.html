@@ -1,0 +1,92 @@
+<form [formGroup]="postJobForm" style="padding: 20px;">
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Job Id</mat-label>
+        <input matInput formControlName="jobId">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Job title</mat-label>
+        <input matInput formControlName="jobTitle">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Role</mat-label>
+        <input matInput formControlName="role">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Responsibility</mat-label>
+        <input matInput formControlName="responsibility">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Company Name</mat-label>
+        <input matInput formControlName="companyName">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Experience</mat-label>
+        <input matInput formControlName="experience">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Salary Range</mat-label>
+        <input matInput formControlName="salaryRange">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Number of Positions</mat-label>
+        <input matInput formControlName="noOfPositions">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Location</mat-label>
+        <input matInput formControlName="location">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Skills and Qualifications</mat-label>
+        <input matInput formControlName="skillsQualifications">
+    </mat-form-field>
+
+    <div>
+        <label>Degree</label>
+        <mat-radio-group class="contextSwitcher" formControlName="degree">
+            <mat-radio-button value="UG">UG</mat-radio-button>
+            <mat-radio-button value="PG">PG</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Company Info</mat-label>
+        <input matInput formControlName="companyInfo">
+    </mat-form-field>
+
+    <div>
+        <label>Employment Type</label>
+        <mat-radio-group class="contextSwitcher" formControlName="empType">
+            <mat-radio-button value="Full time">Full time</mat-radio-button>
+            <mat-radio-button value="Part time">Part time</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <div>
+        <label>Industry Type</label>
+        <mat-radio-group class="contextSwitcher" formControlName="industryType">
+            <mat-radio-button value="Hardware">Hardware</mat-radio-button>
+            <mat-radio-button value="Software">Software</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Search keyword</mat-label>
+        <input matInput formControlName="searchKeyword">
+    </mat-form-field>
+
+    <mat-form-field style="margin-bottom: 40px;">
+        <mat-label>Job Description</mat-label>
+        <textarea matInput formControlName="jobDescription"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="postJob()">Post Job</button>
+</form>

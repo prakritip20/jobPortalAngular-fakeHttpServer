@@ -1,0 +1,23 @@
+<form [formGroup]="recruiterLoginForm" style="margin: 12px;
+display: flex;
+flex-direction: column;
+align-items: center;
+background: #EAEAEA;padding: 16px;">
+    <img src="assets/admin.png" id="icon" alt="User Icon" style="width: 25%;margin-bottom: 10px;" />
+    <mat-form-field style="margin-bottom: 20px;">
+        <mat-label>Email</mat-label>
+        <input matInput type="email" formControlName="email" required>
+        <mat-icon matSuffix>account_circle</mat-icon>
+        <mat-error *ngIf="recruiterLoginForm.controls['email'].hasError('required')">User email is mandatory
+            field</mat-error>
+    </mat-form-field>
+    <mat-form-field style="margin-bottom: 36px;">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required>
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error *ngIf="recruiterLoginForm.controls['email'].hasError('required')">Password is mandatory
+            field</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="recruiterLogin()">Login</button>
+
+</form>

@@ -1,0 +1,36 @@
+{
+  "recruiters": [
+    {
+      "userName": "Prakriti",
+      "companyName": "Eurofins",
+      "email": "prakritipanja@eurofins.com",
+      "password": "123456*Prak",
+      "industry": "IT",
+      "experience": 3,
+      "aboutCompany": "Good place to work at",
+      "id": 1
+    },
+    {
+      "userName": "Ankita Jha",
+      "companyName": "Pernod Ricard",
+      "email": "ankitajha@pernodricard.com",
+      "password": "anki@123",
+      "industry": "Food Technology",
+      "experience": 6,
+      "aboutCompany": "Nice place to grow into profession",
+      "id": 2
+    },
+    {
+      "userName": "Suvechha",
+      "companyName": "IBM",
+      "email": "suvechhapanja@ibm.co.in",
+      "password": "suvi#789",
+      "industry": "HR",
+      "experience": 1,
+      "aboutCompany": "",
+      "id": 3
+    }
+  ],
+  "seekers": [],
+  "allJobs" : []
+}

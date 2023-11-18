@@ -1,0 +1,196 @@
+<div class="landingPageContainerImage">
+    <div class="mainContentWrap" style="position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;">
+        <div class="mb-5 text-center" style="margin-bottom: 5px; text-align: center;">
+            <h1 class="text-white font-weight-bold" style="font-size: 3rem;color: white; font-weight: bold;">The Easiest
+                Way To Get Your Dream Job</h1>
+            <p style="font-size: 1.2rem;color: rgba(255, 255, 255, 0.6);">Lorem ipsum dolor sit amet, consectetur
+                adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
+        </div>
+        <form [formGroup]="searchForm" class="d-flex center-align">
+            <mat-form-field style="margin-right: 32px;">
+                <mat-label>Search Criteria</mat-label>
+                <input matInput formControlName="searchCriteria" placeholder="Job title, Company...">
+            </mat-form-field>
+            <mat-form-field style="margin-right: 32px;">
+                <mat-label>Region</mat-label>
+                <mat-select formControlName="region">
+                    <mat-option value="Anywhere">Anywhere</mat-option>
+                    <mat-option value="San Francisco">San Francisco</mat-option>
+                    <mat-option value="Palo Alto">Palo Alto</mat-option>
+                    <mat-option value="New York">New York</mat-option>
+                    <mat-option value="Manhattan">Manhattan</mat-option>
+                    <mat-option value="Ontario">Ontario</mat-option>
+                    <mat-option value="Toronto">Toronto</mat-option>
+                    <mat-option value="Kansas">Kansas</mat-option>
+                    <mat-option value="Mountain View">Mountain View</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field style="margin-right: 32px;">
+                <mat-label>Employment type</mat-label>
+                <mat-select formControlName="employmentType">
+                    <mat-option value="1">Full time</mat-option>
+                    <mat-option value="2">Part time</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button mat-raised-button color="primary" (click)="searchJobs()"
+                style="top: -10px;min-width: 148px;">Search</button>
+        </form>
+        <div class="popular-keywords">
+            <h3>Trending Keywords:</h3>
+            <ul class="keywords list-unstyled m-0 p-0">
+                <li><a href="#" class="">UI Designer</a></li>
+                <li><a href="#" class="">Python</a></li>
+                <li><a href="#" class="">Developer</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="aboutUs" class="mainContentWrap d-flex" style="position: relative;margin: 40px auto;">
+    <img src="../../assets/office.jpg" style="border-radius: 12px; width: 50%;" />
+    <div style="padding: 50px 0 20px 40px;">
+        <h4 class="headerInfo">About us</h4>
+        <h1 style="font-family: cursive;">Where great companies hire great people</h1>
+        <p style="margin-bottom: 16px;">Since 2012, the world's best companies have depended on JobPortal.Co to find and
+            hire the people they
+            depend on.</p>
+        <div style="display: flex;">
+            <div style="flex:1">
+                <p style="font-size: 32px; font-weight: bold;">20k</p>
+                <span>Companies</span>
+            </div>
+            <div style="flex:1">
+                <p style="font-size: 32px; font-weight: bold;">1.3M</p>
+                <span>Hires</span>
+            </div>
+            <div style="flex:1">
+                <p style="font-size: 32px; font-weight: bold;">8.5B</p>
+                <span>Candidates</span>
+            </div>
+        </div>
+    </div>
+    <div style="position: absolute;
+    bottom: 16px;
+    right: 0;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    background-color: white;
+    padding: 12px;
+    width: 52%;
+    border-radius: 12px;">
+        <img src="../../assets/logo_airbnb.svg" style="height: 40px; flex: 1;" />
+        <img src="../../assets/logo_apple.svg" style="height: 40px; flex: 1;" />
+        <img src="../../assets/logo_paypal.svg" style="height: 40px; flex: 1;" />
+        <img src="../../assets/logo_visa.svg" style="height: 40px; flex: 1;" />
+    </div>
+</div>
+
+<div class="mainContentWrap" style="margin: 0 auto 40px;">
+    <h4 class="headerInfo">Hot Jobs</h4>
+    <div style="display: grid;grid-template-columns: repeat(4 , 1fr);grid-gap: 20px;">
+        <div *ngFor="let jobs of hotJobs"
+            style="background-color: #F9F9F9;padding:16px;border-radius:  8px;border: 1px solid #dee2e6;box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, .2), 0px 1px 1px 0px rgba(0, 0, 0, .14), 0px 1px 3px 0px rgba(0, 0, 0, .12);">
+            <div class="header">{{jobs.company}}</div>
+            <div>
+                <p>{{jobs.role}}</p>
+                <p>Location: {{jobs.location}}</p>
+            </div>
+            <span>Experience: {{jobs.experience}} years</span>
+        </div>
+    </div>
+</div>
+
+<div class="mainContentWrap">
+    <h4 class="headerInfo">Select By Companies</h4>
+    <carousel style="z-index: 10;" [height]="90">
+        <div class="carousel-cell" *ngFor="let company of companyList">
+            <img [src]="company.url" alt="Image + 'company.id' " />
+        </div>
+    </carousel>
+</div>
+
+<div id="ourServices">
+    <div class="mainContentWrap d-flex">
+        <div class="leftContent">
+            <h4 class="headerInfo">Services</h4>
+            <h1>More reasons companies round the world choose JobPortal.Co</h1>
+            <span>Whether you are hiring #2 employee or 200 new employees, our scalable tools, know-how and support
+                help you make the hires that make your business great!</span>
+        </div>
+        <div class="rightContent">
+            <div *ngFor="let service of ourServices" >
+                <h2>{{service.title}}</h2>
+                <span>{{service.details}}</span>
+            </div>            
+        </div>
+    </div>
+</div>
+
+<div id="careerTips" style="margin: 0 0 64px;">
+    <div class="mainContentWrap">
+        <h4 class="headerInfo">Career Tips</h4>
+        <div style="display: grid;grid-template-columns: repeat(3 , 1fr);row-gap: 10%;column-gap: 8%;">
+            <div *ngFor="let tips of careerTips" class="d-flex"
+                style="background-color: #D6D6D6;border-radius: 8px;border: 1px solid #dee2e6;box-shadow: 2px 2px 2px rgba(0,0,0,0.05), 5px 5px 5px rgba(0,0,0,0.1), -1px -1px 1px rgba(255,255,255,0.8), 0px 0px 2px rgba(0,0,0,0.05), 0px 0px 4px rgba(0,0,0,0.15);">
+                <div style="padding: 10px;">
+                    <h5>{{tips.id}}</h5>
+                </div>
+                <div style="border-left: 1px solid #dee2e6;padding: 10px;">
+                    <p style="font-weight: bold;">{{tips.title}}</p>
+                    <p>{{tips.date}}</p>
+                    <span
+                        style="background-color: #6c757d;border-color: #6c757d;display: flex;align-items: center;width: 80px;padding: 4px 6px;border-radius: 8px;color: white;font-size: 12px;">
+                        Read More<mat-icon style="height: 16px;width: 16px;font-size: 16px;">open_in_new</mat-icon>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mainContentWrap" style="margin: 0 auto 20px;">
+    <owl-carousel-o [options]="customOptions">
+        <ng-container *ngFor="let slide of apiData">
+            <ng-template class="slide" carouselSlide id="slide.id">
+                <div style="position: relative;">
+                    <img [src]="slide.url" [alt]="slide.id" [title]="slide.id">
+                    <span
+                        style="
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        padding: 4px 10px;
+                        font-family: cursive;
+                        background-color: #D6D6D6;
+                        border-radius: 8px;
+                        border: 1px solid #dee2e6;
+                        box-shadow: 2px 2px 2px rgba(0,0,0,0.05), 5px 5px 5px rgba(0,0,0,0.1), -1px -1px 1px rgba(255,255,255,0.8), 0px 0px 2px rgba(0,0,0,0.05), 0px 0px 4px rgba(0,0,0,0.15);">{{slide.title}}</span>
+                </div>
+            </ng-template>
+        </ng-container>
+    </owl-carousel-o>
+</div>
+
+<div class="footerSection" style="background-color: #FFE4CA;padding: 24px 0;">
+    <div class="mainContentWrap" style="display: flex;justify-content: space-between;">
+        <div>
+            <img src="/assets/job-logo.png" alt="logo" style="width: 60px;" />
+            <div>JobPortal.Co helps company of all sizes hire at scale</div>
+            <mat-icon>whatsapp</mat-icon>
+            <mat-icon>facebook</mat-icon>
+            <mat-icon>twitter</mat-icon>
+            <mat-icon>play_circle_outline</mat-icon>
+        </div>
+        <div *ngFor="let information of homepageDetails">
+            <h2>{{information.heading}}</h2>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+                <li *ngFor="let data of information.options">{{data.value}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

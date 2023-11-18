@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.center-align {
+    align-items: center;
+}
+
+.mainContentWrap {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.headerInfo {
+    //border-bottom: 1px solid #E3E3E3;
+    color: #EE7D11;
+    margin: 0 0 12px 0;
+    padding-bottom: 4px;
+    font-weight: bold;
+    font-family: cursive !important;
+}
+
+.mat-mdc-form-field {
+    width: 100%;
+
+    .mat-mdc-text-field-wrapper {
+        background-color: white;
+    }
+
+    // .mat-mdc-form-field-subscript-wrapper {
+    //     display: none;
+    // }
+
+    .mat-mdc-form-field-hint-wrapper,
+    .mat-mdc-form-field-error-wrapper {
+        padding: 0;
+    }
+}
+
+.ghostButton.mat-mdc-button {
+    border: 1px solid white!important;
+}
+
+.mat-mdc-button {
+    min-width: auto !important;
+    color: white !important;
+
+    &>.mat-icon {
+        margin-right: 4px !important;
+    }
+}

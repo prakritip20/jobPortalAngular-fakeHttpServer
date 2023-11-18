@@ -1,0 +1,57 @@
+#navbarSection {
+
+    li,
+    a {
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        margin-right: 12px;
+    }
+}
+
+.navbarHeader {
+    top: 0;
+    width: 100%;
+    position: absolute;
+    padding: 8px 0;
+    z-index: 6;
+}
+
+.fixedHeader {
+    width: 100%;
+    background-color: #343a40;
+    padding: 4px 0px;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    background-color: #343a40;
+}
+
+// .notfixed {
+//     position: static;
+//     top: -60px;
+// }
+
+.navbarButtonsContainer {
+    display: flex;
+    margin-left: auto
+}
+
+::ng-deep .languageMenu {
+    .mat-mdc-menu-content {
+        overflow: hidden;
+    }
+
+    .mat-mdc-menu-item {
+        min-height: auto;
+        padding: 2px 10px;
+        margin: 0 4px;
+    }
+}
+
+.activeLang {
+    border-left: 4px solid #343a40;
+}

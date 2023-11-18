@@ -1,0 +1,16 @@
+<div class="header d-flex center-align" style="background-color: #003883;
+            color: white;
+            justify-content: space-between;
+            padding: 4px 0 4px 24px;">
+    {{selectedTab}} Login
+    <button mat-button (click)="closeDialog()"><mat-icon style="margin: 0;color: white;">close</mat-icon></button>
+</div>
+<!-- <p>Select the respective tabs</p> -->
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start" (selectedTabChange)="tabChange($event)">
+    <mat-tab label="Employee">
+        <app-slogin></app-slogin>
+    </mat-tab>
+    <mat-tab label="Recruiter">
+        <app-rlogin></app-rlogin>
+    </mat-tab>
+</mat-tab-group>

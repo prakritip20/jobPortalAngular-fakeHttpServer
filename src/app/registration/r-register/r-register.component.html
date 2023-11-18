@@ -1,0 +1,50 @@
+<form [formGroup]="recruiterSignupForm" style="padding: 24px;">
+    <div class="d-flex">
+        <mat-form-field style="margin-right: 20px;">
+            <mat-label>User Name</mat-label>
+            <input matInput formControlName="userName" required>
+            <mat-error *ngIf="recruiterSignupForm.controls['userName'].hasError('required')">User name is mandatory
+                field</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Company Name</mat-label>
+            <input matInput formControlName="companyName" required>
+            <mat-error *ngIf="recruiterSignupForm.controls['companyName'].hasError('required')">Company Name is
+                mandatory
+                field</mat-error>
+        </mat-form-field>
+    </div>
+    <div class="d-flex">
+        <mat-form-field style="margin-right: 20px;">
+            <mat-label>Email</mat-label>
+            <input matInput type="email" formControlName="email" required>
+            <mat-error *ngIf="recruiterSignupForm.controls['email'].hasError('required')">Email is mandatory
+                field</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" required>
+            <mat-error *ngIf="recruiterSignupForm.controls['password'].hasError('required')">Password is mandatory
+                field</mat-error>
+        </mat-form-field>
+    </div>
+    <div class="d-flex">
+        <mat-form-field style="margin-right: 20px;">
+            <mat-label>Industry</mat-label>
+            <input matInput formControlName="industry" required>
+            <mat-error *ngIf="recruiterSignupForm.controls['industry'].hasError('required')">Industry is mandatory
+                field</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Experience</mat-label>
+            <input matInput type="number" formControlName="experience" required>
+            <mat-error *ngIf="recruiterSignupForm.controls['experience'].hasError('required')">Experience is mandatory
+                field</mat-error>
+        </mat-form-field>
+    </div>
+    <mat-form-field>
+        <mat-label>About Company</mat-label>
+        <textarea matInput formControlName="aboutCompany"></textarea>
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="recruiterSignup()">Register</button>
+</form>

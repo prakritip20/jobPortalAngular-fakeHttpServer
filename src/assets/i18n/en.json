@@ -1,0 +1,7 @@
+{
+    "Button" : {
+        "Login" : "Login",
+        "Register" : "Register",
+        "Dashboard" : "Dashboard"
+    }
+}
